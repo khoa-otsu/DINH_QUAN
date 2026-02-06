@@ -1,0 +1,111 @@
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background:
+        linear-gradient(to bottom, rgba(15, 26, 36, 0.4), rgba(110, 40, 35, 0.8)),
+        url('https://images.unsplash.com/photo-1555658636-6e4a36218be7?w=1920&q=80') center/cover no-repeat;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 0%, rgba(15, 26, 36, 0.6) 100%);
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 2rem;
+}
+
+.logo {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.logoImage {
+    height: 128px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.4));
+    transition: transform 0.3s ease;
+}
+
+.logoImage:hover {
+    transform: scale(1.05);
+}
+
+.tagline {
+    font-family: 'DTPhudu', var(--font-primary);
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    color: var(--color-cream);
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.highlight {
+    color: var(--color-gold);
+    font-size: 1.2em;
+}
+
+.cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.arrow {
+    width: 24px;
+    height: 24px;
+}
+
+.scroll {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: var(--color-cream);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.scrollLine {
+    width: 1px;
+    height: 50px;
+    background: linear-gradient(to bottom, var(--color-cream), transparent);
+    margin: 0.5rem auto 0;
+    animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+
+    0%,
+    100% {
+        opacity: 0.5;
+        height: 50px;
+    }
+
+    50% {
+        opacity: 1;
+        height: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    .tagline {
+        font-size: 1.25rem;
+    }
+
+    .logoImage {
+        height: 96px;
+    }
+}

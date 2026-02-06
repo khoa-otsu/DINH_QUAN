@@ -1,42 +1,307 @@
+/* ===================================
+   ĐỈNH Beer Garden - Global Styles
+   Next.js App Router
+=================================== */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --color-red: #E42810;
+  --color-brown: #6E2823;
+  --color-brown-dark: #4a1c18;
+  --color-orange: #B34726;
+  --color-gold: #febe52;
+  --color-cream: #fbedc8;
+  --color-cream-light: #fdf5e8;
+  --color-gray: #d7d7d7;
+  --color-dark: #0f1a24;
+  --color-teal: #00e0e6;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  --font-primary: 'DTPhudu', sans-serif;
+  --font-body: 'Averta', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.15);
+  --shadow-strong: 0 8px 40px rgba(0, 0, 0, 0.25);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-cream-light);
+  color: var(--color-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ===================================
+   12-Column Grid System
+=================================== */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 70px;
+}
+
+.container-fluid {
+  width: 100%;
+  padding: 0 70px;
+}
+
+/* Grid Row */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+/* Grid Columns */
+.col {
+  flex: 1;
+  padding: 0 15px;
+}
+
+.col-1 {
+  flex: 0 0 8.333%;
+  max-width: 8.333%;
+}
+
+.col-2 {
+  flex: 0 0 16.666%;
+  max-width: 16.666%;
+}
+
+.col-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.col-4 {
+  flex: 0 0 33.333%;
+  max-width: 33.333%;
+}
+
+.col-5 {
+  flex: 0 0 41.666%;
+  max-width: 41.666%;
+}
+
+.col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col-7 {
+  flex: 0 0 58.333%;
+  max-width: 58.333%;
+}
+
+.col-8 {
+  flex: 0 0 66.666%;
+  max-width: 66.666%;
+}
+
+.col-9 {
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+
+.col-10 {
+  flex: 0 0 83.333%;
+  max-width: 83.333%;
+}
+
+.col-11 {
+  flex: 0 0 91.666%;
+  max-width: 91.666%;
+}
+
+.col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+/* Section Spacing */
+.section {
+  padding: 70px 0;
+}
+
+.section-sm {
+  padding: 35px 0;
+}
+
+.section-lg {
+  padding: 100px 0;
+}
+
+/* Responsive Grid */
+@media (max-width: 1200px) {
+
+  .container,
+  .container-fluid {
+    padding: 0 50px;
   }
+}
+
+@media (max-width: 768px) {
+
+  .container,
+  .container-fluid {
+    padding: 0 35px;
+  }
+
+  .section {
+    padding: 50px 0;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  [class*="col-"] {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* ===================================
+   Typography - DTPhudu for Headings
+=================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'DTPhudu', var(--font-primary);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Utility Classes */
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--color-red);
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.section-title.light {
+  color: var(--color-cream);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.btn-primary {
+  background: var(--color-red);
+  color: white;
+  box-shadow: var(--shadow-soft);
+}
+
+.btn-primary:hover {
+  background: #c92210;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-strong);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-red);
+  border: 2px solid var(--color-red);
+}
+
+.btn-outline:hover {
+  background: var(--color-red);
+  color: white;
+}
+
+.btn-outline.light {
+  color: var(--color-cream);
+  border-color: var(--color-cream);
+}
+
+.btn-outline.light:hover {
+  background: var(--color-cream);
+  color: var(--color-brown);
+}
+
+.btn-hero {
+  background: var(--color-red);
+  color: white;
+  padding: 1.25rem 2.5rem;
+  font-size: 1.1rem;
+  border-radius: 0;
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
+}
+
+.btn-hero:hover {
+  background: #c92210;
+  transform: translateX(5px);
+}
+
+.btn-large {
+  padding: 1.25rem 3rem;
+  font-size: 1.1rem;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+/* Animations */
+@keyframes scrollPulse {
+
+  0%,
+  100% {
+    opacity: 0.5;
+    height: 50px;
+  }
+
+  50% {
+    opacity: 1;
+    height: 70px;
+  }
+}
+
+@keyframes pinBounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }

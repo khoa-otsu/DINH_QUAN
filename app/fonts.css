@@ -1,0 +1,183 @@
+/* ===================================
+   Custom Fonts - DTPhudu & Averta
+=================================== */
+
+/* DTPhudu - Vietnamese Display Font */
+@font-face {
+    font-family: 'DTPhudu';
+    src: url('/fonts/dtphudu/DTPhudu-Light.woff2') format('woff2'),
+        url('/fonts/dtphudu/DTPhudu-Light.woff') format('woff'),
+        url('/fonts/dtphudu/DTPhudu-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DTPhudu';
+    src: url('/fonts/dtphudu/DTPhudu-Regular.woff2') format('woff2'),
+        url('/fonts/dtphudu/DTPhudu-Regular.woff') format('woff'),
+        url('/fonts/dtphudu/DTPhudu-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DTPhudu';
+    src: url('/fonts/dtphudu/DTPhudu-Medium.woff2') format('woff2'),
+        url('/fonts/dtphudu/DTPhudu-Medium.woff') format('woff'),
+        url('/fonts/dtphudu/DTPhudu-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DTPhudu';
+    src: url('/fonts/dtphudu/DTPhudu-Bold.woff2') format('woff2'),
+        url('/fonts/dtphudu/DTPhudu-Bold.woff') format('woff'),
+        url('/fonts/dtphudu/DTPhudu-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DTPhudu';
+    src: url('/fonts/dtphudu/DTPhudu-Black.woff2') format('woff2'),
+        url('/fonts/dtphudu/DTPhudu-Black.woff') format('woff'),
+        url('/fonts/dtphudu/DTPhudu-Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Averta - Body Font */
+@font-face {
+    font-family: 'Averta';
+    src: url('/fonts/averta/Averta-Extrathin.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url('/fonts/averta/Averta-ExtrathinItalic.otf') format('opentype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url('/fonts/averta/Averta-Thin.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url('/fonts/averta/Averta-ThinItalic.otf') format('opentype');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url('/fonts/averta/Averta-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url('/fonts/averta/Averta-LightItalic.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url('/fonts/averta/Averta-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url('/fonts/averta/Averta-RegularItalic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url('/fonts/averta/Averta-Semibold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url('/fonts/averta/Averta-SemiboldItalic.otf') format('opentype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url('/fonts/averta/Averta-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url('/fonts/averta/Averta-BoldItalic.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url('/fonts/averta/Averta-ExtraBold.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url('/fonts/averta/Averta-ExtraBoldItalic.otf') format('opentype');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url('/fonts/averta/Averta-Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url('/fonts/averta/Averta-BlackItalic.otf') format('opentype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}

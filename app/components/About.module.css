@@ -1,0 +1,175 @@
+/* ===================================
+   About Section - TẦM NHÌN & TÍNH CÁCH THƯƠNG HIỆU
+=================================== */
+
+.about {
+    position: relative;
+    overflow: hidden;
+}
+
+/* TẦM NHÌN Section */
+.visionSection {
+    position: relative;
+    background: var(--color-brown);
+    padding: 80px 70px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.visionSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        linear-gradient(to bottom, rgba(110, 43, 35, 0.9), rgba(110, 43, 35, 0.85)),
+        url('/images/homepage/beer_cheers.png') center/cover no-repeat;
+}
+
+.visionOverlay {
+    display: none;
+}
+
+.visionContent {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.visionTitle {
+    font-family: 'DTPhudu', var(--font-primary);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: var(--color-gold);
+    letter-spacing: 0.15em;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.visionText {
+    font-family: 'Averta', var(--font-body);
+    color: var(--color-cream);
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.visionText strong {
+    color: var(--color-gold);
+    font-style: normal;
+    font-weight: 700;
+}
+
+/* TÍNH CÁCH THƯƠNG HIỆU Section */
+.brandSection {
+    padding: 80px 70px;
+    background: var(--color-cream-light);
+}
+
+.brandTitle {
+    font-family: 'DTPhudu', var(--font-primary);
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+    color: var(--color-dark);
+    letter-spacing: 0.1em;
+    margin-bottom: 3rem;
+    font-weight: 500;
+}
+
+.valuesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.valueCard {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.valueImageWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.valueImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.valueCard:hover .valueImage {
+    transform: scale(1.05);
+}
+
+.valueInfo {
+    padding: 0;
+}
+
+.valueTitle {
+    font-family: 'DTPhudu', var(--font-primary);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    margin-bottom: 0.75rem;
+}
+
+.valueDescription {
+    font-family: 'Averta', var(--font-body);
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+
+    .visionSection,
+    .brandSection {
+        padding: 60px 50px;
+    }
+}
+
+@media (max-width: 992px) {
+    .valuesGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .valueCard:nth-child(3) {
+        grid-column: span 2;
+        max-width: 50%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .visionSection,
+    .brandSection {
+        padding: 50px 35px;
+    }
+
+    .valuesGrid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .valueCard:nth-child(3) {
+        grid-column: span 1;
+        max-width: 100%;
+    }
+
+    .valueTitle {
+        font-size: 1.5rem;
+    }
+}
