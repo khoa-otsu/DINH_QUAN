@@ -1,5 +1,5 @@
 .hero {
-    min-height: 100vh;
+    min-height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -101,11 +101,44 @@
 }
 
 @media (max-width: 768px) {
-    .tagline {
-        font-size: 1.25rem;
+    .content {
+        padding: 1.5rem;
+    }
+
+    .logo {
+        margin-bottom: 1.5rem;
     }
 
     .logoImage {
-        height: 96px;
+        height: 80px;
+    }
+
+    .tagline {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        gap: 0.1rem;
+    }
+
+    .scroll {
+        bottom: 1.5rem;
+    }
+
+    .scrollLine {
+        height: 30px;
+        animation: scrollPulseMobile 2s ease-in-out infinite;
+    }
+}
+
+@keyframes scrollPulseMobile {
+
+    0%,
+    100% {
+        opacity: 0.5;
+        height: 30px;
+    }
+
+    50% {
+        opacity: 1;
+        height: 45px;
     }
 }
